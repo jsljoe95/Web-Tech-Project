@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About</title>
+    <title>Project version 1</title>
     <style>
-        body{
+            body{
                 margin:0;
                 font-family: Arial, Helvetica, sans-serif;
                 background-color:#F0F8FF;
@@ -52,6 +52,7 @@
                 margin-left: 100px;
                 margin-top: 5px;
             }
+            
             hr#line{
                 width:100%;
             }
@@ -63,92 +64,109 @@
                 margin-bottom: 5px;
                 font-family: cursive;   
             }
-
-            /* objective */
-            h2#mission{
-                margin-left:120px;
-                font-family: cursive;
-                font-size:35px;
+            hr#line{
+                width:100%;
             }
 
-            p#objective{
-                margin-left:120px;
-                margin-right:120px;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 25px;
+            div#title h3{
+                font-size: 60px;
+                text-align: center;
+                margin-top:10px;
+                margin-bottom: 5px;
+                font-family: cursive;   
             }
-        
-            /* site map */
-        
-            h2#js{
-                margin-left:120px;
-                font-family: cursive;
+            /* contact us */
+            div#contact{
+                margin-left: 120px;
+            }
+            div#contact h2{
                 font-size: 30px;
             }
-            p.title{
-                float:left;
-                margin-left: 180px;
-                font-size: 23px;
-            } 
-            p.title a{
-                text-decoration: none;
-                color:black;
+            div#contact p{
+                font-size: 15px;
             }
-            .about-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 180px;
-            }
-            .music-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 170px;
-            }
-            .beats-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 75px;
-            }
-            .artists-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 80px;
-            }
-            .sponsor-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 80px;
-            }
-            .contact-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 93px;
-            }
-            a{
-                text-decoration: none;
-                color: grey;
+            #detail{
+                font-style:italic;
             }
 
-            /* comment */
-            p#comment{
-                margin-top: 300px;
+
+            /* survey form */
+            div#survey{
+                background-color:#DCDCDC;
             }
-            h2#survey{
-                margin-left: 120px;
+            form{
+                padding-top: 15px;
+                padding-bottom: 15px;
             }
-            #textarea{
-                margin-left: 120px;
+
+            h3#vote{
+                text-align: center;
+                margin-bottom: 5px;
             }
-            
-            /* picture */
-            img{
-                display:block;
+            table{
                 margin-left:auto;
                 margin-right:auto;
+                width: 50%;
+                text-align:center;
+                background-color: white;
+                
             }
-            
-            
-            
+            table, tr, td, th {
+                border: 1px solid black;
+            }
+
+            td{
+                height: 30px;
+            }
+            td#last-cell{
+                height: 160px;
+            }
+            h1#feedback{
+                font-size:30px;
+                margin-left: 120px;
+                margin-top: 50px;
+            }
+
+            #submit{
+                display: block;
+                margin-left:auto;
+                margin-right:auto;
+                margin-top: 5px;
+            }
+
+            /* location */
+            img#gmap{
+                display: block;
+                /* height: 480px; */
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+            }
+            h3#lo{
+                margin-left:120px;
+                font-size:30px;
+                margin-top:50px;
+                margin-bottom:2px;
+            }
+            p#lodetail{
+                margin-left:120px;
+                font-size:15px;
+                font-style:italic;
+            }
+
+            /* top */
+            p#top{
+                text-align:center;
+            }
+            p#top a{
+                text-decoration: underline;
+                color: black;
+                font-size: 15px;
+            }
+            td#last-cell{
+                height: 50px;
+            }
+
 
     </style>
     <script type="text/javascript">
@@ -223,11 +241,16 @@
             let a = document.getElementById("home");
             a.style.fontSize = '25px';
         }
+
+        function message(){
+            alert("Thank you for your feedback!");
+        }
     </script>
+
 </head>
 <body>
-    <!-- navigation bar -->
-    <div id='navigation_bar'>
+<!-- navigation bar        -->
+        <div id='navigation_bar'>
             <div class='page-width'>
                 <div id='music_logo'>
                     <img id="logo" src="Images/listen.png" title="logo" alt="logo">
@@ -257,7 +280,7 @@
                     <li id='map' onmouseover="sizebigger7()" onmouseout="sizesmaller7()">
                         <a href="sitemap.html">Site Map</a>
                     </li>
-                    
+
                     <li>
                         <audio controls autoplay loop>
                             <source src="Music/Can't Sleep At Night(M).ogg" type="audio/ogg">
@@ -272,101 +295,88 @@
         <div id='title'>
             <h3>JS Music House</h3>
         </div>
-<!-- objective -->
-<h2 id='mission'>Our Mission</h2>
 
-<p id='objective'>
-    JS Music House is a website that introduces music that are not listed on Apple Music or Spodify and allow users to sponsor the listed artists. 
-    The objective of the website is to give opportunities for talented musicians who make good music but lack exposure to get sponsored by people and get more exposure. 
-    Also, it will allow music lovers to discover talent musicians and their new songs. 
-    Ultimately, it will function as a bridge that helps talented artists to overcome the high barrier to enter the industry.
-</p>
+        <!-- contact us -->
+        <div id='contact'>
+            <h2>Contact Us</h2>
+            <p id='detail'>
+                If you have any question about the website, songs, artists, sponsorship, etc, please contact us through the email or phone number below. 
+            </p>
+            <p id='info'>
+                Email: jsljoe95@gmail.com <br>
+                Phone: 617-874-0494
+            </p>
+        </div>
 
-<img src="Images/pic.png" title="vision" alt="vision">
 
-<!-- site map  -->
-<!-- <div id='site-map'>
-    <h2 id='js'>JS Music House Site Map</h2>
-    <p class='title'>
-        <a href="#">About</a>
-    </p>
-    <p class='title'>
-        <a href="music.html">Music</a>
-    </p>
-    <p class='title'>
-        <a href="beats.html">Beats</a>
-    </p>
-    <p class='title'>
-        <a href="artists.html">Artists</a>
-    </p>
-    <p class='title'>
-        <a href="sponsor.html">Sponsor</a>
-    </p>
-    <p class='title'>
-        <a href="contact.html">Contact</a>
-    </p>
+    <!-- Feedback -->
+        <h1 id='feedback'>Please give us your Feedback!</h1>
+        <div id='survey'>
+        <form method="post" action="mailto:jlee37@babson.edu">
+        <table id='vote'>
+            <tr>
+                <td>
+                    First Name: <input type="text" name="first-name" size="15" maxlength="8" placeholder="first name"/> 
+                </td>
+                <td>
+                    Last Name: <input type="text" name="last-name" size="15" maxlength="8" placeholder="last name"/>
+                </td>
+                <td>
+                    Age: <input type="text" name="age" size="10" maxlength="3" placeholder="age" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender:
+                    <select name="gender">
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                </td>
+                <td>
+                    Email: 
+                    <input type="text" name="email" size="25" maxlength="20" placeholder="email address"/>
+                </td>
+                <td>
+                    How did you hear about us?
+                    <select name="gender">
+                        <option value="Facebook">Facbook</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
 
-    <p class='about-list'>
-        <a href="#">Objective</a>
-        <br>
-        <br>
-        <a href="#">Site Map</a>
-    </p>
-    <p class='music-list'>
-        <a href="index.html">Today's Music</a>
-        <br>
-        <br>
-        <a href="music.html">Music By Genre</a>
-        <br>
-        <br>
-        <a href="music.html">Discover New Music</a>
-        <br>
-        <br>
-        <a href="music.html">Vote For Favorite Music</a>
-    </p>
-    <p class='beats-list'>
-        <a href="index.html">Today's Beats</a>
-        <br>
-        <br>
-        <a href="beats.html">Beats By Genre</a>
-        <br>
-        <br>
-        <a href="beats.html">Discover New Beats</a>
-        <br>
-        <br>
-        <a href="beats.html">Vote For Favorite Beat</a>
-    </p>
+            <tr>
+                <td id='last-cell' colspan='3'>
+                    What do you think about this Website? <br>
+                    <textarea id='textarea' name="comments" rows="8" cols="90" placeholder="Your comments will be carefully reviewed"></textarea>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        </form>
+        </div>
+        <input  id='submit' type="submit" onclick="message()">
 
-    <p class='artists-list'>
-        <a href="index.html">Top Beats</a>
-        <br>
-        <br>
-        <a href="artists.html">Artists By Genre</a>
-        <br>
-        <br>
-        <a href="artists.html">Meet New Artists</a>
-        <br>
-        <br>
-        <a href="artists.html">Vote For Favorite Artist</a>
-    </p>
-    <p class='sponsor-list'>
-        <a href="sponsor.html">Sponsor Artists</a>
-        <br>
-        <br>
-        <a href="artists.html">Vote For Talented Artists</a>
-    </p>
-    <p class='contact-list'>
-        <a href="contact.html">Contact Via Email</a>
-        <br>
-        <br>
-        <a href="contact.html">Location</a>
-    </p> -->
-<!-- survey form -->
-    <!-- <form method="post" action="mailto:jsljoe95@gmail.com">
-        <p id='comment'>
-            <h2 id='survey'>What do you think about this website?</h2>
-            <textarea id='textarea' name="comments" rows="8" cols="90" placeholder="Your comments will be carefully reviewed"></textarea>
+        <!-- location -->
+        <h3 id='lo'>Our Location</h3>
+        <p id='lodetail'>
+            We are located in two locations: Babson College(Wellesley) and Cronin's landing(Waltham) <br>
+            To learn more about the locations, click on the pin-pointed parts of the map.
         </p>
-    </form>   -->
-</body>
+        <img id='gmap' src="Images/map.png" usemap="#image-map">
+
+        <map name="image-map">
+            <area target="_blank" alt="babosn-home" title="babosn-home" href="https://www.babson.edu/" coords="303,754,419,872" shape="rect">
+            <area target="_blank" alt="cronin's" title="cronin's" href="https://www.equityapartments.com/greater-boston/waltham/cronins-landing-apartments?mkwid=sWBoSepf8_dc&amp;pcrid=186075066666&amp;pkw=%2Bcronins%20%2Blanding&amp;pmt=b&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_term=%2BCronins+%2BLanding&amp;utm_campaign=EQR_Boston_Properties_Search_Branded_Broad_Null&amp;utm_group=Cronins+Landing+Apartments&amp;gclid=Cj0KCQjw3JXtBRC8ARIsAEBHg4mjtFy0O6O2PEzyeDw1EkFozNP4b3HtbMlupfHNVsQi_-Ai1rBPNuAaArKNEALw_wcB&amp;gclsrc=aw.ds" coords="529,55,611,128" shape="rect">
+        </map>
+
+        <p id='top'>
+            <a href="#contact">Back to Top</a>
+        </p>
+
+        
+    </body>
 </html>

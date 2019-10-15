@@ -14,13 +14,13 @@
             
             div#navigation_bar{
                 background-color: white;
-                margin-left: 430px;
+                margin-left: 330px;
             }
     
             div#music_logo{
                 padding-top: 4px;
                 float: left;
-                border-right: 1px solid white;
+                
             }
     
             img#logo{
@@ -49,7 +49,7 @@
                 display: block;
                 height: 20px;
                 width: 150px;
-                margin-left: 220px;
+                margin-left: 100px;
                 margin-top: 5px;
             }
             
@@ -204,7 +204,82 @@
                 margin-left: 210px;
                 font-weight: bold;
             }
-        </style>
+    </style>
+    <script type="text/javascript">
+        function sizebigger1(){
+            let a = document.getElementById("about");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller1(){
+            let a = document.getElementById("about");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger2(){
+            let a = document.getElementById("music");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller2(){
+            let a = document.getElementById("music");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger3(){
+            let a = document.getElementById("beats");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller3(){
+            let a = document.getElementById("beats");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger4(){
+            let a = document.getElementById("artists");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller4(){
+            let a = document.getElementById("artists");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger5(){
+            let a = document.getElementById("sponsor");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller5(){
+            let a = document.getElementById("sponsor");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger6(){
+            let a = document.getElementById("contact");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller6(){
+            let a = document.getElementById("contact");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger7(){
+            let a = document.getElementById("map");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller7(){
+            let a = document.getElementById("map");
+            a.style.fontSize = '25px';
+        }
+        
+        function sizebigger8(){
+            let a = document.getElementById("home");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller8(){
+            let a = document.getElementById("home");
+            a.style.fontSize = '25px';
+        }
+
+    </script>
+
 </head>
 <body>
 <!-- navigation bar        -->
@@ -214,24 +289,31 @@
                     <img id="logo" src="Images/listen.png" title="logo" alt="logo">
                 </div>
                 <div id="mid">
-                    <li>
+                    <li id='home' onmouseover="sizebigger8()" onmouseout="sizesmaller8()">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li id="about" onmouseover="sizebigger1()" onmouseout="sizesmaller1()">
                         <a href="about.html">About</a>
                     </li>
-                    <li>
+                    <li id="music" onmouseover="sizebigger2()" onmouseout="sizesmaller2()">
                         <a href="music.html">Music</a>
                     </li>
-                    <li>
+                    <li id="beats" onmouseover="sizebigger3()" onmouseout="sizesmaller3()">
                         <a href="beats.html">Beats</a>
                     </li>
-                    <li>
+                    <li id="artists" onmouseover="sizebigger4()" onmouseout="sizesmaller4()">
                         <a href="artists.html">Artists</a>
                     </li>
-                    <li>
+                    <li id="sponsor" onmouseover="sizebigger5()" onmouseout="sizesmaller5()">
                         <a href="sponsor.html">Sponsor</a>
                     </li>
-                    <li>
+                    <li id="contact" onmouseover="sizebigger6()" onmouseout="sizesmaller6()">
                         <a href="contact.html">Contact</a>
                     </li>
+                    <li id='map' onmouseover="sizebigger7()" onmouseout="sizesmaller7()">
+                        <a href="sitemap.html">Site Map</a>
+                    </li>
+
                     <li>
                         <audio controls autoplay loop>
                             <source src="Music/Can't Sleep At Night(M).ogg" type="audio/ogg">
