@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project version 1</title>
+    <style>
+            body{
+                margin:0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color:#F0F8FF;
+            }
+            
+            div#navigation_bar{
+                background-color: white;
+                margin-left: 430px;
+            }
+    
+            div#music_logo{
+                padding-top: 4px;
+                float: left;
+                border-right: 1px solid white;
+            }
+    
+            img#logo{
+                height:50px;
+            }
+    
+            div#mid{
+                float: left;
+            }
+    
+            #mid li{
+                list-style-type: none;
+                font-size: 25px;
+                padding: 13px 20px 13px 20px;
+                float: left;
+            }
+    
+            #mid li a{
+                color:black;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                font-weight:bold;
+            }
+
+            audio{
+                display: block;
+                height: 20px;
+                width: 150px;
+                margin-left: 220px;
+                margin-top: 5px;
+            }
+            
+            hr#line{
+                width:100%;
+            }
+
+            div#title h3{
+                font-size: 60px;
+                text-align: center;
+                margin-top:10px;
+                margin-bottom: 5px;
+                font-family: cursive;   
+            }
+
+            div#container1{
+                background-color:#DCDCDC;
+                text-align:center;
+            }
+
+            div#title h2{
+                margin-left: 10px;
+                margin-bottom: 2px;
+                font-size:20px;
+            }
+
+            div#title h2 a{
+                text-decoration: none;
+                color: black;
+            }
+            
+            iframe.today-music{
+                margin: 10px 10px;
+            }
+            
+            p.today-song{
+                float: left;
+            }
+
+            h1.song-title{
+                font-size:25px;
+                font-weight: bold;
+            }
+
+            h2.song-details{
+                font-size: 18px; 
+            }
+
+            div#one{
+                float:left;
+                margin-left: 150px;
+            }
+
+            div#two{
+                float: left;
+                margin-left: 110px;
+            }
+
+            div#three{
+                float: left;
+                margin-left: 50px;
+            }
+
+            div#container2{
+                text-align: center;
+                background-color:#DCDCDC;
+            }
+
+            h2#beats a{
+                text-decoration: none;
+                color: black;
+                font-size: 20px;
+            }
+
+            h2#beats {
+                margin-bottom: 2px;
+                margin-left: 10px;
+            }
+
+            div#four{
+                float:left;
+                margin-left: 150px;
+            }
+
+            div#five{
+                float: left;
+                margin-left: 110px;
+            }
+
+            div#six{
+                float: left;
+                margin-left: 190px;
+            }
+        
+            
+
+            div#artist-avatar{
+                text-align:center;
+                background-color:#DCDCDC;
+                margin-top: 2px;
+            }
+
+            img.artist-pic{
+                border-radius: 50%;
+                width: 250px;
+                margin-top: 10px;
+                margin-left: 60px;
+                margin-right: 60px;
+                margin-bottom: 10px;
+            }
+
+            h4#top-artists a{
+                text-decoration:none;
+                color:black;
+            }
+
+            h4#top-artists{
+                margin-bottom: 2px;
+                margin-left: 10px;
+                font-size:20px;
+                margin-top: 180px;
+            }
+            
+            p.junsu-sns{
+                float:left;
+                text-align:center;
+                font-size:25px;
+                margin-left: 180px;
+                font-weight: bold;
+            }
+
+            p.tompa-sns{
+                float:left;
+                text-align:center;
+                font-size:25px;
+                margin-left: 185px;
+                font-weight: bold;
+            }
+
+            p.benny-sns{
+                float:left;
+                text-align:center;
+                font-size:25px;
+                margin-left: 150px;
+                font-weight: bold;
+            }
+
+            p.dasloe-sns{
+                float:left;
+                text-align:center;
+                font-size:25px;
+                margin-left: 210px;
+                font-weight: bold;
+            }
+        </style>
+</head>
+<body>
+<!-- navigation bar        -->
+        <div id='navigation_bar'>
+            <div class='page-width'>
+                <div id='music_logo'>
+                    <img id="logo" src="Images/listen.png" title="logo" alt="logo">
+                </div>
+                <div id="mid">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="music.html">Music</a>
+                    </li>
+                    <li>
+                        <a href="beats.html">Beats</a>
+                    </li>
+                    <li>
+                        <a href="artists.html">Artists</a>
+                    </li>
+                    <li>
+                        <a href="sponsor.html">Sponsor</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <audio controls autoplay loop>
+                            <source src="Music/Can't Sleep At Night(M).ogg" type="audio/ogg">
+                            <source src="Music/Can't Sleep At Night(M).mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </li>
+                </div>
+            </div>   
+        </div>
+
+
+<!-- today's music  -->
+        <hr id='line'>
+        <div id='title'>
+            <h3>JS Music House</h3>
+            <h2><a id='todays-music' href="music.html">Today's Music</a> </h2>
+        </div>
+        <div id='container1'>
+            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/557263728&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/322372804&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/434020701&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>           
+            <div id='one'>   
+                <p class='today-song'>
+                    <h1 class='song-title'>Anomaly</h1>
+                    <h2 class='song-details'>Artist: dasloe <br>
+                        Genre: Electronic <br>
+                        URL: <a href='https://soundcloud.com/dasloe' target='_blank'>https://soundcloud.com/dasloe</a>
+                    </h2>
+                </p>
+            </div>
+        
+            <div id='two'> 
+                <p class='today-song'>
+                    <h1 class='song-title'>Sunset</h1>
+                    <h2 class='song-details'>Artist: fully bold <br>
+                        Genre: R&B <br>
+                        URL: <a href='https://soundcloud.com/fullybold/sunset-prod-rooftop' target='_blank'>https://soundcloud.com/fullybold/sunset-prod-rooftop</a>
+                    </h2>
+                </p>
+            </div>
+            <div id='three'>
+                <p class='today-song'>
+                    <h1 class='song-title'>Bout Yah</h1>
+                    <h2 class='song-details'>Artist: brad <br>
+                        Genre: R&B <br>
+                        URL: <a href='https://soundcloud.com/brad247/bout-yah-luh-one' target='_blank'>https://soundcloud.com/brad247/bout-yah-luh-one</a>
+                    </h2>
+                </p>
+            </div>
+        </div>
+
+
+<!-- today's beats  -->
+        <h2 id='beats'><a href="beats.html">Today's Beats</a></h2>
+        <div id='container2'>
+            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/669492698&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/469816338&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/694467235&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+
+            <div id='four'>   
+                <p class='today-song'>
+                    <h1 class='song-title'>Mood</h1>
+                    <h2 class='song-details'>Artist: Junsu Lee <br>
+                        Genre: Jazz R&B <br>
+                        URL: <a href='https://soundcloud.com/user-416606292' target='_blank'>https://soundcloud.com/user-416606292</a>
+                    </h2>
+                </p>
+            </div>
+            <div id='five'>   
+                <p class='today-song'>
+                    <h1 class='song-title'>Lots of Perc</h1>
+                    <h2 class='song-details'>Artist: Benny Kim <br>
+                        Genre: Electronic <br>
+                        URL: <a href='https://soundcloud.com/bennykim' target='_blank'>https://soundcloud.com/bennykim</a>
+                    </h2>
+                </p>
+            </div>
+            <div id='six'>   
+                <p class='today-song'>
+                    <h1 class='song-title'>OLIFE</h1>
+                    <h2 class='song-details'>Artist: Tomppabeats <br>
+                        Genre: Lofi <br>
+                        URL: <a href='https://soundcloud.com/tomppabeats' target='_blank'>https://soundcloud.com/tomppabeats</a>
+                    </h2>
+                </p>
+            </div>
+        </div>
+
+
+<!-- top artists  -->
+    <h4 id='top-artists'><a href="artists.html">Top Artists</a></h4>
+    <div id='artist-avatar'>
+        <img class='artist-pic' src="Images/junsu.png" title="junsu" alt="junsu">
+        <img class='artist-pic' src="Images/tompa.png" title="tompa" alt="tompa">
+        <img class='artist-pic' src="Images/benny.png" title="benny" alt="benny">
+        <img class='artist-pic' src="Images/dasloe.png" title="dasloe" alt="dasloe">
+    </div>
+    <p class="junsu-sns">
+        Junsu Lee<br>
+        SNS:<a href="https://www.instagram.com/jjuns_jjuns/" target="_blank">jjuns_jjuns</a>
+    </p>
+    <p class="tompa-sns">
+        Tomppabeats<br>
+        SNS:<a href="https://www.instagram.com/tomppabeats/" target="_blank">tomppabeats</a>
+    </p>
+    <p class="benny-sns">
+        Benny Kim<br>
+        SNS:<a href="https://www.instagram.com/bennykim95/" target="_blank">bennykim95</a>
+    </p>
+    <p class="dasloe-sns">
+        Dasloe<br>
+        SNS:<a href="https://www.instagram.com/dasloe/" target="_blank">dasloe</a>
+    </p>
+
+
+    </body>
+</html>
