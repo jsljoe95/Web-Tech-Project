@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project version 1</title>
+    <style>
+            body{
+                margin:0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color:#F0F8FF;
+            }
+            
+            div#navigation_bar{
+                background-color: white;
+                margin-left: 330px;
+            }
+    
+            div#music_logo{
+                padding-top: 4px;
+                float: left;
+                
+            }
+    
+            img#logo{
+                height:50px;
+            }
+    
+            div#mid{
+                float: left;
+            }
+    
+            #mid li{
+                list-style-type: none;
+                font-size: 25px;
+                padding: 13px 20px 13px 20px;
+                float: left;
+            }
+    
+            #mid li a{
+                color:black;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none;
+                font-weight:bold;
+            }
+
+            audio{
+                display: block;
+                height: 20px;
+                width: 150px;
+                margin-left: 100px;
+                margin-top: 5px;
+            }
+            
+            hr#line{
+                width:100%;
+            }
+
+            div#title h3{
+                font-size: 60px;
+                text-align: center;
+                margin-top:10px;
+                margin-bottom: 5px;
+                font-family: cursive;   
+            }
+            hr#line{
+                width:100%;
+            }
+
+            div#title h3{
+                font-size: 60px;
+                text-align: center;
+                margin-top:10px;
+                margin-bottom: 5px;
+                font-family: cursive;   
+            }
+            /* contact us */
+            div#contact{
+                margin-left: 120px;
+            }
+            div#contact h2{
+                font-size: 30px;
+            }
+            div#contact p{
+                font-size: 15px;
+            }
+            #detail{
+                font-style:italic;
+            }
+
+
+            /* survey form */
+            div#survey{
+                background-color:#DCDCDC;
+            }
+            form{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            h3#vote{
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            table{
+                margin-left:auto;
+                margin-right:auto;
+                width: 50%;
+                text-align:center;
+                background-color: white;
+                
+            }
+            table, tr, td, th {
+                border: 1px solid black;
+            }
+
+            td{
+                height: 30px;
+            }
+            td#last-cell{
+                height: 160px;
+            }
+            h1#feedback{
+                font-size:30px;
+                margin-left: 120px;
+                margin-top: 50px;
+            }
+
+            #submit{
+                display: block;
+                margin-left:auto;
+                margin-right:auto;
+                margin-top: 5px;
+            }
+
+            /* location */
+            img#gmap{
+                display: block;
+                /* height: 480px; */
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+            }
+            h3#lo{
+                margin-left:120px;
+                font-size:30px;
+                margin-top:50px;
+                margin-bottom:2px;
+            }
+            p#lodetail{
+                margin-left:120px;
+                font-size:15px;
+                font-style:italic;
+            }
+
+            /* top */
+            p#top{
+                text-align:center;
+            }
+            p#top a{
+                text-decoration: underline;
+                color: black;
+                font-size: 15px;
+            }
+            td#last-cell{
+                height: 50px;
+            }
+
+
+    </style>
+    <script type="text/javascript">
+        function sizebigger1(){
+            let a = document.getElementById("about");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller1(){
+            let a = document.getElementById("about");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger2(){
+            let a = document.getElementById("music");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller2(){
+            let a = document.getElementById("music");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger3(){
+            let a = document.getElementById("beats");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller3(){
+            let a = document.getElementById("beats");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger4(){
+            let a = document.getElementById("artists");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller4(){
+            let a = document.getElementById("artists");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger5(){
+            let a = document.getElementById("sponsor");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller5(){
+            let a = document.getElementById("sponsor");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger6(){
+            let a = document.getElementById("contact");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller6(){
+            let a = document.getElementById("contact");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger7(){
+            let a = document.getElementById("map");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller7(){
+            let a = document.getElementById("map");
+            a.style.fontSize = '25px';
+        }
+
+        function sizebigger8(){
+            let a = document.getElementById("home");
+            a.style.fontSize = '30px';
+        }
+        function sizesmaller8(){
+            let a = document.getElementById("home");
+            a.style.fontSize = '25px';
+        }
+
+        function message(){
+            alert("Thank you for your feedback!");
+        }
+    </script>
+
+</head>
+<body>
+<!-- navigation bar        -->
+        <div id='navigation_bar'>
+            <div class='page-width'>
+                <div id='music_logo'>
+                    <img id="logo" src="Images/listen.png" title="logo" alt="logo">
+                </div>
+                <div id="mid">
+                    <li id='home' onmouseover="sizebigger8()" onmouseout="sizesmaller8()">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li id="about" onmouseover="sizebigger1()" onmouseout="sizesmaller1()">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li id="music" onmouseover="sizebigger2()" onmouseout="sizesmaller2()">
+                        <a href="music.html">Music</a>
+                    </li>
+                    <li id="beats" onmouseover="sizebigger3()" onmouseout="sizesmaller3()">
+                        <a href="beats.html">Beats</a>
+                    </li>
+                    <li id="artists" onmouseover="sizebigger4()" onmouseout="sizesmaller4()">
+                        <a href="artists.html">Artists</a>
+                    </li>
+                    <li id="sponsor" onmouseover="sizebigger5()" onmouseout="sizesmaller5()">
+                        <a href="sponsor.html">Sponsor</a>
+                    </li>
+                    <li id="contact" onmouseover="sizebigger6()" onmouseout="sizesmaller6()">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li id='map' onmouseover="sizebigger7()" onmouseout="sizesmaller7()">
+                        <a href="sitemap.html">Site Map</a>
+                    </li>
+
+                    <li>
+                        <audio controls autoplay loop>
+                            <source src="Music/Can't Sleep At Night(M).ogg" type="audio/ogg">
+                            <source src="Music/Can't Sleep At Night(M).mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </li>
+                </div>
+            </div>   
+        </div>
+        <hr id='line'>
+        <div id='title'>
+            <h3>JS Music House</h3>
+        </div>
+
+        <!-- contact us -->
+        <div id='contact'>
+            <h2>Contact Us</h2>
+            <p id='detail'>
+                If you have any question about the website, songs, artists, sponsorship, etc, please contact us through the email or phone number below. 
+            </p>
+            <p id='info'>
+                Email: jsljoe95@gmail.com <br>
+                Phone: 617-874-0494
+            </p>
+        </div>
+
+
+    <!-- Feedback -->
+        <h1 id='feedback'>Please give us your Feedback!</h1>
+        <div id='survey'>
+        <form method="post" action="mailto:jlee37@babson.edu">
+        <table id='vote'>
+            <tr>
+                <td>
+                    First Name: <input type="text" name="first-name" size="15" maxlength="8" placeholder="first name"/> 
+                </td>
+                <td>
+                    Last Name: <input type="text" name="last-name" size="15" maxlength="8" placeholder="last name"/>
+                </td>
+                <td>
+                    Age: <input type="text" name="age" size="10" maxlength="3" placeholder="age" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender:
+                    <select name="gender">
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                </td>
+                <td>
+                    Email: 
+                    <input type="text" name="email" size="25" maxlength="20" placeholder="email address"/>
+                </td>
+                <td>
+                    How did you hear about us?
+                    <select name="gender">
+                        <option value="Facebook">Facbook</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td id='last-cell' colspan='3'>
+                    What do you think about this Website? <br>
+                    <textarea id='textarea' name="comments" rows="8" cols="90" placeholder="Your comments will be carefully reviewed"></textarea>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        </form>
+        </div>
+        <input  id='submit' type="submit" onclick="message()">
+
+        <!-- location -->
+        <h3 id='lo'>Our Location</h3>
+        <p id='lodetail'>
+            We are located in two locations: Babson College(Wellesley) and Cronin's landing(Waltham) <br>
+            To learn more about the locations, click on the pin-pointed parts of the map.
+        </p>
+        <img id='gmap' src="Images/map.png" usemap="#image-map">
+
+        <map name="image-map">
+            <area target="_blank" alt="babosn-home" title="babosn-home" href="https://www.babson.edu/" coords="303,754,419,872" shape="rect">
+            <area target="_blank" alt="cronin's" title="cronin's" href="https://www.equityapartments.com/greater-boston/waltham/cronins-landing-apartments?mkwid=sWBoSepf8_dc&amp;pcrid=186075066666&amp;pkw=%2Bcronins%20%2Blanding&amp;pmt=b&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_term=%2BCronins+%2BLanding&amp;utm_campaign=EQR_Boston_Properties_Search_Branded_Broad_Null&amp;utm_group=Cronins+Landing+Apartments&amp;gclid=Cj0KCQjw3JXtBRC8ARIsAEBHg4mjtFy0O6O2PEzyeDw1EkFozNP4b3HtbMlupfHNVsQi_-Ai1rBPNuAaArKNEALw_wcB&amp;gclsrc=aw.ds" coords="529,55,611,128" shape="rect">
+        </map>
+
+        <p id='top'>
+            <a href="#contact">Back to Top</a>
+        </p>
+
+        
+    </body>
+</html>

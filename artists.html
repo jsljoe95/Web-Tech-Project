@@ -4,182 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Everything Music, the bridge between artists and the music lovers">
+    <meta name="keywords" content="music, soundcloud, youtube, new music, trend, music trend, music article, producer, beats, rap beat">
     <title>Project version 1</title>
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
     <style>
-            body{
-                margin:0;
-                font-family: Arial, Helvetica, sans-serif;
-                background-color:#F0F8FF;
+            .jumbotron{
+                background-image: url("Images/acoustic.png");
+                text-align: center;
             }
-            
-            div#navigation_bar{
-                background-color: white;
-                margin-left: 330px;
+            .container{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
-    
-            div#music_logo{
-                padding-top: 4px;
-                float: left;
-                
+            .display-4{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                font-size: 60px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
             }
-    
-            img#logo{
-                height:50px;
+            .lead{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
             }
-    
-            div#mid{
-                float: left;
+            #promote{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+                font-weight: bold;
+                font-size: 15px;
+                margin-top: 50px;
             }
-    
-            #mid li{
-                list-style-type: none;
-                font-size: 25px;
-                padding: 13px 20px 13px 20px;
-                float: left;
-            }
-    
-            #mid li a{
-                color:black;
-                font-family: Arial, Helvetica, sans-serif;
-                text-decoration: none;
-                font-weight:bold;
+            #submit{
+                border:none;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 15px;
+                background-color: grey;
+                color: white; 
             }
 
-            audio{
-                display: block;
-                height: 20px;
-                width: 150px;
-                margin-left: 100px;
-                margin-top: 5px;
-            }
-            
-            hr#line{
-                width:100%;
-            }
+        /* artists*/
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bio{
+            padding-left: 40px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        img{
+            height: 350px;
+        }
+        .image{
+            padding: 20px 20px;
+        }
+        #myForm{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .link{
+            color: orange;
+        }
 
-            
+
+
     </style>
     <script type="text/javascript">
-        function sizebigger1(){
-            let a = document.getElementById("about");
-            a.style.fontSize = '30px';
+        function sizebigger(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '20px';
+            a.style.backgroundColor="#C0C0C0"
         }
-        function sizesmaller1(){
-            let a = document.getElementById("about");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger2(){
-            let a = document.getElementById("music");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller2(){
-            let a = document.getElementById("music");
-            a.style.fontSize = '25px';
+        function sizesmaller(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '18px';
+            a.style.backgroundColor="white"
         }
 
-        function sizebigger3(){
-            let a = document.getElementById("beats");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller3(){
-            let a = document.getElementById("beats");
-            a.style.fontSize = '25px';
-        }
+        let srcList = [
+            // exciting
+            "https://www.youtube.com/embed/RyCNEFiaNNg", 
+            "https://www.youtube.com/embed/fOeq_UJjonA",
 
-        function sizebigger4(){
-            let a = document.getElementById("artists");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller4(){
-            let a = document.getElementById("artists");
-            a.style.fontSize = '25px';
-        }
+            // romantic 
+            "https://www.youtube.com/embed/AJtDXIazrMo",
+            "https://www.youtube.com/embed/kOCkne-Bku4",
 
-        function sizebigger5(){
-            let a = document.getElementById("sponsor");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller5(){
-            let a = document.getElementById("sponsor");
-            a.style.fontSize = '25px';
-        }
+            // Sad 
+            "https://www.youtube.com/embed/c7rCyll5AeY",
+            "https://www.youtube.com/embed/tJ3E-pYPYjI",
 
-        function sizebigger6(){
-            let a = document.getElementById("contact");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller6(){
-            let a = document.getElementById("contact");
-            a.style.fontSize = '25px';
-        }
+            // Tired 
+            "https://www.youtube.com/embed/fvjpE_wFL5A",
+            "https://www.youtube.com/embed/-2OJa-XMfek",
 
-        function sizebigger7(){
-            let a = document.getElementById("map");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller7(){
-            let a = document.getElementById("map");
-            a.style.fontSize = '25px';
-        }
+            // Strange 
+            "https://www.youtube.com/embed/SDTZ7iX4vTQ",
+            "https://www.youtube.com/embed/bpOSxM0rNPM",
+
+            // Glitchy 
+            "https://www.youtube.com/embed/Kd3xLxRB26I",
+            "https://www.youtube.com/embed/HZik4fKw3G0",
+
+            // Sentimental 
+            "https://www.youtube.com/embed/ShZ978fBl6Y",
+            "https://www.youtube.com/embed/o5p9zQdxSfs",
+
+            // gloomy 
+            "https://www.youtube.com/embed/FgMgXbd7f_g",
+            "https://www.youtube.com/embed/zlJDTxahav0"
+        ];
         
-        function sizebigger8(){
-            let a = document.getElementById("home");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller8(){
-            let a = document.getElementById("home");
-            a.style.fontSize = '25px';
+        let moodArray = ["exciting","","romantic","","sad","","tired","","strange","","glitchy","","sentimental","","gloomy"];
+
+        function dragEnd(mood){
+            for(i=0; i<moodArray.length; i=i+1){
+                if(mood==moodArray[i]){
+                    document.getElementById("one").src=srcList[i];
+                    document.getElementById("two").src=srcList[i+1];
+                }
+            }
         }
 
+        function val(){
+            let form1 = document.getElementById("myForm");
+            
+            if(form1.name == "") {
+                alert("Please enter a name");
+            }
+        }
+
+        function change(){
+            document.getElementById("hiko").src="Images/person1-1.jpg";
+        }
+        function back(){
+            document.getElementById("hiko").src="Images/person1.jpg";
+        }
+
+        function change1(){
+            document.getElementById("hyngsn").src="Images/person2-2.jpg";
+        }
+        function back1(){
+            document.getElementById("hyngsn").src="Images/person2.jpg";
+        }
+
+        function change2(){
+            document.getElementById("justin").src="Images/person3-3.jpg";
+        }
+        function back2(){
+            document.getElementById("justin").src="Images/person3.jpg";
+        }
     </script>
 
 </head>
 <body>
-<!-- navigation bar        -->
-        <div id='navigation_bar'>
-            <div class='page-width'>
-                <div id='music_logo'>
-                    <img id="logo" src="Images/listen.png" title="logo" alt="logo">
-                </div>
-                <div id="mid">
-                    <li id='home' onmouseover="sizebigger8()" onmouseout="sizesmaller8()">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li id="about" onmouseover="sizebigger1()" onmouseout="sizesmaller1()">
-                        <a href="about.html">About</a>
-                    </li>
-                    <li id="music" onmouseover="sizebigger2()" onmouseout="sizesmaller2()">
-                        <a href="music.html">Music</a>
-                    </li>
-                    <li id="beats" onmouseover="sizebigger3()" onmouseout="sizesmaller3()">
-                        <a href="beats.html">Beats</a>
-                    </li>
-                    <li id="artists" onmouseover="sizebigger4()" onmouseout="sizesmaller4()">
-                        <a href="artists.html">Artists</a>
-                    </li>
-                    <li id="sponsor" onmouseover="sizebigger5()" onmouseout="sizesmaller5()">
-                        <a href="sponsor.html">Sponsor</a>
-                    </li>
-                    <li id="contact" onmouseover="sizebigger6()" onmouseout="sizesmaller6()">
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li id='map' onmouseover="sizebigger7()" onmouseout="sizesmaller7()">
-                        <a href="sitemap.html">Site Map</a>
-                    </li>
 
-                    <li>
-                        <audio controls autoplay loop>
-                            <source src="Music/Can't Sleep At Night(M).ogg" type="audio/ogg">
-                            <source src="Music/Can't Sleep At Night(M).mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </li>
-                </div>
-            </div>   
-        </div>
-        <hr id='line'>
+<!-- navigation bar  -->
 
-        <h1>Preparing...</h1>
-    </body>
+            <div class="container">
+                <div class="mid">
+                    <ul>
+                        <li id='home' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li id="about" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li id="music" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="music.html">Music</a>
+                        </li>
+                        
+                        <li id="artists" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="artists.html">Artists</a>
+                        </li>
+
+                        <li id="news" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="news.html">News</a>
+                        </li>
+
+                        <li id="sponsor" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sponsor.html">Sponsor</a>
+                        </li>
+                        <li id="contact" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li id='map' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sitemap.html">Site Map</a>
+                        </li>
+                        <li id='credit' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="credit.html">Credit</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+<!-- artists -->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Meet new artists everyday!</h1>
+                    <p class="lead">
+                        Everything Music will introduce talented new artists everyday! </br>
+                        Support them by listening to their music!
+                    </p>
+
+                    <p id="promote">
+                        Do you know any artists who are talented but not famous? Lets promote them!
+                    </p>
+                    <form id="myForm">
+                        Name: <input type="text" size="10" name="firstname" >
+                        <input onclick="val()" id="submit" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+            <div class="container">
+                <table>
+                    <tr>
+                        <td class="image">
+                            <img id="hiko" onmouseover="change()" onmouseout="back()" src="Images/person1.jpg" alt="hiko" title="hiko">
+                        </td>
+                        <td class="bio">
+                            Name: hiko  </br>
+                            Email: won970425@naver.com </br>
+                            SoundCloud: <a class="link" href="https://soundcloud.com/hikohiko" target="_blank">https://soundcloud.com/hikohiko</a>  </br>
+                            Top Tracks: greed, room 402, surface
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="image">
+                            <img id="hyngsn" onmouseover="change1()" onmouseout="back1()" src="Images/person2.jpg" alt="hiko" title="hiko">
+                        </td>
+                        <td class="bio">
+                            Name: hyngsn  </br>
+                            Email: hhyungsssssun@naver.com </br>
+                            SoundCloud: <a class="link" href="https://soundcloud.com/hhyungsssssun" target="_blank">https://soundcloud.com/hhyungsssssun</a>  </br>
+                            Top Tracks: 25 (feat. Khundi Panda), Fallin' Out Cover, Back off and pick up
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="image">
+                            <img id="justin" onmouseover="change2()" onmouseout="back2()" src="Images/person3.jpg" alt="hiko" title="hiko">
+                        </td>
+                        <td class="bio">
+                            Name: justin  </br>
+                            Email: justinanalog@gmail.com </br>
+                            SoundCloud: <a class="link" href="hhttps://soundcloud.com/justinanalog" target="_blank">https://soundcloud.com/justinanalog</a>  </br>
+                            Top Tracks: limbo, Everywhere
+
+                        </td>
+                    </tr>
+                    
+
+                </table>
+
+
+            </div>
+
+            
+
+
+
+        
+
+</body>
 </html>

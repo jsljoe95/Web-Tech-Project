@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Everything Music, the bridge between artists and the music lovers">
+    <meta name="keywords" content="music, soundcloud, youtube, new music, trend, music trend, music article, producer, beats, rap beat">
+    <title>Project version 1</title>
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <style>
+            .jumbotron{
+                background-image: url("Images/tt.png");
+                text-align: center;
+            }
+            .container{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .display-4{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                font-size: 60px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+            }
+            .lead{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                color: black;
+                margin-top: 30px;
+                /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
+            }
+            a{
+                color:black;
+            }
+    </style>
+    <script type="text/javascript">
+    // navigation hover java (changes backgroundColor)
+        function sizebigger(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '20px';
+            a.style.backgroundColor="lightgray"
+        }
+        function sizesmaller(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '18px';
+            a.style.backgroundColor="white"
+        }
+    </script>
+
+</head>
+<body>
+
+<!-- navigation bar  -->
+
+            <div class="container">
+                <div class="mid">
+                    <ul>
+                        <li id='home' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li id="about" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li id="music" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="music.html">Music</a>
+                        </li>
+                        
+                        <li id="artists" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="artists.html">Artists</a>
+                        </li>
+
+                        <li id="news" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="news.html">News</a>
+                        </li>
+
+                        <li id="sponsor" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sponsor.html">Sponsor</a>
+                        </li>
+                        <li id="contact" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li id='map' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sitemap.html">Site Map</a>
+                        </li>
+                        <li id='credit' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="credit.html">Credit</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+<!-- jumbotron -->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Credits</h1>
+                    <p class="lead">
+                        Articles: <a href="https://www.billboard.com/" target="_blank">Bilboard</a>, <a href="https://www.bbc.com/news" target="_blank">BBC News</a> </br>
+                        Music: <a href="https://soundcloud.com/discover" target="_bank">SoundCloud</a>, <a href="https://www.youtube.com/" target="_blank">YouTube</a> </br>
+                        Photos: <a href="https://unsplash.com/" target="_blank">Unsplash</a> </br>
+                    </p>
+                </div>
+            </div>
+
+            
+        </body>
+    </html>
+ 

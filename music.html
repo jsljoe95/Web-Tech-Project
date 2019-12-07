@@ -4,326 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Music</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Everything Music, the bridge between artists and the music lovers">
+    <meta name="keywords" content="music, soundcloud, youtube, new music, trend, music trend, music article, producer, beats, rap beat">
+    <title>Project version 1</title>
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
     <style>
-        body{
-                margin:0;
-                font-family: Arial, Helvetica, sans-serif;
-                background-color:#F0F8FF;
-            }
-            
-            div#navigation_bar{
-                background-color: white;
-                margin-left: 330px;
-            }
-    
-            div#music_logo{
-                padding-top: 4px;
-                float: left;
-                
-            }
-    
-            img#logo{
-                height:50px;
-            }
-    
-            div#mid{
-                float: left;
-            }
-    
-            #mid li{
-                list-style-type: none;
-                font-size: 25px;
-                padding: 13px 20px 13px 20px;
-                float: left;
-            }
-    
-            #mid li a{
-                color:black;
-                font-family: Arial, Helvetica, sans-serif;
-                text-decoration: none;
-                font-weight:bold;
-            }
-
-            audio{
-                display: block;
-                height: 20px;
-                width: 150px;
-                margin-left: 100px;
-                margin-top: 5px;
-            }
-
-            hr#line{
-                width:100%;
-            }
-
-            /* R&B section */
-            div.title h2{
-                margin-left:10px;
-                margin-bottom: 2px;
-            }
-            div.container{
-                text-align:center;
-                background-color: #DCDCDC;
-            }
-            iframe{
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-            
-            /* survey table  */
-            form{
-                background-color:#DCDCDC;
-                
-            }
-
-            h3#vote{
+            .jumbotron{
+                background-image: url("Images/head.png");
                 text-align: center;
-                margin-bottom: 5px;
             }
-            table{
-                margin-left:auto;
-                margin-right:auto;
-                width: 50%;
-                text-align:center;
-                background-color: white;
-                
+            .container{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
-            table, tr, td, th {
-                border: 1px solid black;
+            .display-4{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                font-size: 60px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+            }
+            .lead{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+            }
+            #beats{
+                background-image: url("Images/head.png");
             }
 
-            td{
-                height: 30px;
-            }
+    /* drag  */
+        
+        h3{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        div#feeling{
+            text-align: center;
+        }
+       
+
+        div.droptarget{
+            border: 1px solid black;
+            width: 400px;
+            height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            text-align: center;
+            font-size: 12px;
+            padding-top: 40px;
             
-            /* top */
-            p#top{
-                text-align:center;
-            }
-            p#top a{
-                text-decoration: underline;
-                color: black;
-                font-size: 15px;
-            }
-            td#last-cell{
-                height: 50px;
-            }
+        }
+        div.music{
+            text-align: center;
+        }
+        iframe.today-music{
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            
+        }
+        h2{
+            text-align: center;
+        }
+
+        p#you{
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+        .buttons{
+            text-align: center;
+            margin-top: 10px;
+        }
 
     </style>
     <script type="text/javascript">
-        function sizebigger1(){
-            let a = document.getElementById("about");
-            a.style.fontSize = '30px';
+        function sizebigger(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '20px';
+            a.style.backgroundColor="#E6E6E6"
         }
-        function sizesmaller1(){
-            let a = document.getElementById("about");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger2(){
-            let a = document.getElementById("music");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller2(){
-            let a = document.getElementById("music");
-            a.style.fontSize = '25px';
+        function sizesmaller(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '18px';
+            a.style.backgroundColor="white"
         }
 
-        function sizebigger3(){
-            let a = document.getElementById("beats");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller3(){
-            let a = document.getElementById("beats");
-            a.style.fontSize = '25px';
-        }
+        let srcList = [
+            // exciting
+            "https://www.youtube.com/embed/RyCNEFiaNNg", 
+            "https://www.youtube.com/embed/fOeq_UJjonA",
 
-        function sizebigger4(){
-            let a = document.getElementById("artists");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller4(){
-            let a = document.getElementById("artists");
-            a.style.fontSize = '25px';
-        }
+            // romantic 
+            "https://www.youtube.com/embed/AJtDXIazrMo",
+            "https://www.youtube.com/embed/kOCkne-Bku4",
 
-        function sizebigger5(){
-            let a = document.getElementById("sponsor");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller5(){
-            let a = document.getElementById("sponsor");
-            a.style.fontSize = '25px';
-        }
+            // Sad 
+            "https://www.youtube.com/embed/c7rCyll5AeY",
+            "https://www.youtube.com/embed/tJ3E-pYPYjI",
 
-        function sizebigger6(){
-            let a = document.getElementById("contact");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller6(){
-            let a = document.getElementById("contact");
-            a.style.fontSize = '25px';
-        }
+            // Tired 
+            "https://www.youtube.com/embed/fvjpE_wFL5A",
+            "https://www.youtube.com/embed/-2OJa-XMfek",
 
-        function sizebigger7(){
-            let a = document.getElementById("map");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller7(){
-            let a = document.getElementById("map");
-            a.style.fontSize = '25px';
-        }
+            // Strange 
+            "https://www.youtube.com/embed/SDTZ7iX4vTQ",
+            "https://www.youtube.com/embed/bpOSxM0rNPM",
 
-        function sizebigger8(){
-            let a = document.getElementById("home");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller8(){
-            let a = document.getElementById("home");
-            a.style.fontSize = '25px';
-        }
+            // Glitchy 
+            "https://www.youtube.com/embed/Kd3xLxRB26I",
+            "https://www.youtube.com/embed/HZik4fKw3G0",
 
-        // submit
-        function c(){
-            alert("Thank you for submitting your answers!");
+            // Sentimental 
+            "https://www.youtube.com/embed/ShZ978fBl6Y",
+            "https://www.youtube.com/embed/o5p9zQdxSfs",
+
+            // gloomy 
+            "https://www.youtube.com/embed/FgMgXbd7f_g",
+            "https://www.youtube.com/embed/zlJDTxahav0"
+        ];
+        
+        let moodArray = ["exciting","","romantic","","sad","","tired","","strange","","glitchy","","sentimental","","gloomy"];
+
+        function dragEnd(mood){
+
+            let text = document.getElementById("drag");
+
+            for(i=0; i<moodArray.length; i=i+1){
+                if(mood==moodArray[i]){
+                    document.getElementById("one").src=srcList[i];
+                    document.getElementById("two").src=srcList[i+1];
+                    console.log(moodArray[i]);
+                    text.innerHTML = "Here is a " + moodArray[i] + " song for you"
+                }
+            }
         }
     </script>
+
 </head>
 <body>
-    <!-- navigation bar -->
-    <div id='navigation_bar'>
-            <div class='page-width'>
-                <div id='music_logo'>
-                    <img id="logo" src="Images/listen.png" title="logo" alt="logo">  
+
+<!-- navigation bar  -->
+
+            <div class="container">
+                <div class="mid">
+                    <ul>
+                        <li id='home' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li id="about" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li id="music" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="music.html">Music</a>
+                        </li>
+                        
+                        <li id="artists" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="artists.html">Artists</a>
+                        </li>
+
+                        <li id="news" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="news.html">News</a>
+                        </li>
+
+                        <li id="sponsor" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sponsor.html">Sponsor</a>
+                        </li>
+                        <li id="contact" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li id='map' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sitemap.html">Site Map</a>
+                        </li>
+                        <li id='credit' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="credit.html">Credit</a>
+                        </li>
+                    </ul>
                 </div>
-                <div id="mid">
-                    <li id='home' onmouseover="sizebigger8()" onmouseout="sizesmaller8()">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li id="about" onmouseover="sizebigger1()" onmouseout="sizesmaller1()">
-                        <a href="about.html">About</a>
-                    </li>
-                    <li id="music" onmouseover="sizebigger2()" onmouseout="sizesmaller2()">
-                        <a href="music.html">Music</a>
-                    </li>
-                    <li id="beats" onmouseover="sizebigger3()" onmouseout="sizesmaller3()">
-                        <a href="beats.html">Beats</a>
-                    </li>
-                    <li id="artists" onmouseover="sizebigger4()" onmouseout="sizesmaller4()">
-                        <a href="artists.html">Artists</a>
-                    </li>
-                    <li id="sponsor" onmouseover="sizebigger5()" onmouseout="sizesmaller5()">
-                        <a href="sponsor.html">Sponsor</a>
-                    </li>
-                    <li id="contact" onmouseover="sizebigger6()" onmouseout="sizesmaller6()">
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li id='map' onmouseover="sizebigger7()" onmouseout="sizesmaller7()">
-                        <a href="sitemap.html">Site Map</a>
-                    </li>
-                    <li>
-                        <audio controls autoplay loop>
-                            <source src="Music/Can't Sleep At Night(M).ogg" type="audio/ogg">
-                            <source src="Music/Can't Sleep At Night(M).mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </li>
+            </div>
+<!-- Music suggestion by mood  -->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">How are you feeling today?</h1>
+                    <p class="lead">
+                        Everything Music provides a music suggestion service based on your mood! </br>
+                        Drag, Drop, and Listen!
+                    </p>
                 </div>
-            </div>   
+            </div>
+
+
+        <div class="container">
+            
+            <h3 id="drag">Drag your mood into the square</h3>
+            
+        <div class="container">
+            <div class="buttons">
+                <button id="exciting" type="button" class="btn btn-primary" ondragend="dragEnd(this.id)" draggable="true">Exciting</button>
+                <button id="romantic" type="button" class="btn btn-secondary" ondragend="dragEnd(this.id)" draggable="true">Romantic</button>
+                <button id="sad" type="button" class="btn btn-success" ondragend="dragEnd(this.id)" draggable="true">Sad</button>
+                <button id="tired" type="button" class="btn btn-danger" ondragend="dragEnd(this.id)" draggable="true">Tired</button>
+                <button id="strange" type="button" class="btn btn-warning" ondragend="dragEnd(this.id)" draggable="true">Strange</button>
+                <button id="glitchy" type="button" class="btn btn-info" ondragend="dragEnd(this.id)" draggable="true">Glitchy</button>
+                <button id="sentimental" type="button" class="btn btn-light" ondragend="dragEnd(this.id)" draggable="true">Sentimental</button>
+                <button id="gloomy"type="button" class="btn btn-dark" ondragend="dragEnd(this.id)" draggable="true">Gloomy</button>
+            </div>
         </div>
-        <hr id='line'>
+ 
+            <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">Drop your feeling right here</div>
 
-
-        <!-- R&B section -->
-        
-        <div class='title'>
-            <h2>R&B</h2>
+            <p id="you"></p>
+            
+            <div class="container">
+                <div class="music">
+                    <iframe id="one" class="today-music" width="450px" height="300px" scrolling="no" allow="autoplay" src="https://www.youtube.com/embed/OoMIAo0a2TA"></iframe> 
+                    <iframe id="two" class="today-music" width="450px" height="300px" scrolling="no" allow="autoplay" src="https://www.youtube.com/embed/cgeijHtv0ic"></iframe>
+                </div>
+            </div>
         </div>
 
-        <div class='container'>
-            <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/376871510&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>            
-            <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/337032574&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/334556536&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/342306344&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-        </div>
-
-        <div class='title'>
-                <h2>Jazz & Blues</h2>
-            </div>
-    
-            <div class='container'>
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/396318876&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>         
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/574837029&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>      
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/392323521&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe> 
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/453166047&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            </div>
-        
-        <div class='title'>
-                <h2>Electronic</h2>
-            </div>
-    
-            <div class='container'>
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/577553793&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/684931750&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/465812595&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/327507193&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            </div>
-
-        <div class='title'>
-                <h2>Hip-hop</h2>
-            </div>
-    
-            <div class='container'>
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/449498496&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/439345209&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/339511023&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                <iframe class='rb' width="350px" height="250px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/644974851&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <div id="beats" class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Are you looking for beats?</h1>
+                <p class="lead">
+                    Everything Music also provides best collection of beats from talented produceres! </br>
+                    Listen and Connect!
+                </p>
             </div>
         
-<!-- vote for favorite song -->
-    <h3 id='vote'>Vote for your favorite song!</h3>
-    <form method="post" action="mailto:jlee37@babson.edu">
-    <table id='vote'>
-        <tr>
-            <td>
-                First Name: <input type="text" name="first-name" size="15" maxlength="8" placeholder="Please enter your first name"/> 
-            </td>
-            <td>
-                Last Name: <input type="text" name="last-name" size="15" maxlength="8" placeholder="Please enter your last name"/>
-            </td>
-            <td>
-                Age: <input type="text" name="age" size="15" maxlength="3" placeholder="Please enter your age"/>
-            </td>
-            <td>
-                Gender:
-                <select name="gender">
-                    <option value="0">Male</option>
-                    <option value="1">Female</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td id='last-cell' colspan='4'>
-                What is your favorite song?
-                <select name="song">
-                    <option value="마지막">마지막</option>
-                    <option value="I'm-in-love-with-you">I'm in love with you</option>
-                    <option value="Twice">Twice</option>
-                    <option value="그러면안되는거알지만">그러면 안되는거 알지만...</option>
-                    <option value="view">view</option>
-                    <option value="baby-blue">baby blue</option>
-                    <option value="letmeknow">letmeknow</option>
-                    <option value="닿게됐어">닿게됐어</option>
-                </select>
-                <br>
-                <input id='submit' onclick="c()" type="submit">
-            </td>
-        </tr>
-    </table>
-    </form>
-    <p id='top'>
-        <a href="#line">Back to Top</a>
-    </p>
+
+        <div class="card-deck">
+            <div class="card">
+                <iframe class="card-img-top" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/415506933&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div class="card-body">
+                <h5 class="card-title">limbo (w/ haventseenyou , hoiwave)</h5>
+                <p class="card-text">justin </br> justinanalog@gmail.com</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                    <iframe class="card-img-top" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/469816338&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div class="card-body">
+                <h5 class="card-title">Lots of Perc</h5>
+                <p class="card-text">Benny Kim </br> <a href="https://www.instagram.com/bennykim95/">Instagram </a></p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                    <iframe class="card-img-top" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/344548169&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                <div class="card-body">
+                <h5 class="card-title">Greed</h5>
+                <p class="card-text">hiko </br> won970425@naver.com </p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+            
 </body>
 </html>

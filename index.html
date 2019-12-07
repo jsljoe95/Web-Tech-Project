@@ -4,431 +4,265 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Everything Music, the bridge between artists and the music lovers">
+    <meta name="keywords" content="music, soundcloud, youtube, new music, trend, music trend, music article, producer, beats, rap beat">
     <title>Project version 1</title>
-    <style>
-            body{
-                margin:0;
-                font-family: Arial, Helvetica, sans-serif;
-                background-color:#F0F8FF;
-            }
-            
-            div#navigation_bar{
-                background-color: white;
-                margin-left: 330px;
-            }
-    
-            div#music_logo{
-                padding-top: 4px;
-                float: left;
-                
-            }
-    
-            img#logo{
-                height:50px;
-            }
-    
-            div#mid{
-                float: left;
-            }
-    
-            #mid li{
-                list-style-type: none;
-                font-size: 25px;
-                padding: 13px 20px 13px 20px;
-                float: left;
-            }
-    
-            #mid li a{
-                color:black;
-                font-family: Arial, Helvetica, sans-serif;
-                text-decoration: none;
-                font-weight:bold;
-            }
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-            audio{
-                display: block;
-                height: 20px;
-                width: 150px;
-                margin-left: 100px;
+    <style>
+            
+/* Bb joke */
+            div#title h6{
+                font-size: 15px;
+                text-align: center;
+                margin-top: 0;
+                font-style: italic;
+            } 
+/* body starts here  */
+            .jumbotron{
+                text-align: center;
+                background-image: url("Images/cov.png");
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 margin-top: 5px;
             }
-            
-            hr#line{
-                width:100%;
+            .container{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
 
-            div#title h3{
-                font-size: 60px;
-                text-align: center;
-                margin-top:10px;
-                margin-bottom: 5px;
-                font-family: cursive;   
-            }
-
-            div#container1{
-                background-color:#DCDCDC;
-                text-align:center;
-            }
-
-            div#title h2{
-                margin-left: 10px;
-                margin-bottom: 2px;
-                font-size:20px;
-            }
-
-            div#title h2 a{
-                text-decoration: none;
-                color: black;
-            }
-            
-            iframe.today-music{
-                margin: 10px 10px;
-            }
-            
-            p.today-song{
-                float: left;
-            }
-
-            h1.song-title{
-                font-size:25px;
+            .display-4{
+                margin-top: 5%;
                 font-weight: bold;
             }
-
-            h2.song-details{
-                font-size: 18px; 
-            }
-
-            div#one{
-                float:left;
-                margin-left: 150px;
-            }
-
-            div#two{
-                float: left;
-                margin-left: 110px;
-            }
-
-            div#three{
-                float: left;
-                margin-left: 50px;
-            }
-
-            div#container2{
-                text-align: center;
-                background-color:#DCDCDC;
-            }
-
-            h2#beats a{
-                text-decoration: none;
+            .today{
                 color: black;
-                font-size: 20px;
             }
-
-            h2#beats {
-                margin-bottom: 2px;
-                margin-left: 10px;
-            }
-
-            div#four{
-                float:left;
-                margin-left: 150px;
-            }
-
-            div#five{
-                float: left;
-                margin-left: 110px;
-            }
-
-            div#six{
-                float: left;
-                margin-left: 190px;
-            }
+            
         
-            
-
-            div#artist-avatar{
-                text-align:center;
-                background-color:#DCDCDC;
-                margin-top: 2px;
+            /* news table*/
+            #newsJumbo{
+                padding: 20px 20px;
+                background-image: url("Images/books.png");
             }
-
-            img.artist-pic{
-                border-radius: 50%;
-                width: 250px;
-                margin-top: 10px;
-                margin-left: 60px;
-                margin-right: 60px;
-                margin-bottom: 10px;
+            table{
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                table-layout: auto;
+                width: 100%;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin-bottom: 20px;
             }
-
-            h4#top-artists a{
-                text-decoration:none;
-                color:black;
+            table th{
+                padding: 5px 20px 5px 20px;
+                /* background-color: lemonchiffon; */
+                font-size: 20px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
             }
-
-            h4#top-artists{
-                margin-bottom: 2px;
-                margin-left: 10px;
-                font-size:20px;
-                margin-top: 180px;
+            table td{
+                padding: 5px 20px 5px 20px;
+                font-size: 20px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+                
             }
-            
-            p.junsu-sns{
-                float:left;
-                text-align:center;
-                font-size:25px;
-                margin-left: 180px;
-                font-weight: bold;
+            table a{
+                color: black;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
             }
 
-            p.tompa-sns{
-                float:left;
-                text-align:center;
-                font-size:25px;
-                margin-left: 185px;
-                font-weight: bold;
+            .audio{
+                text-align: right;
+                margin-right:0;
+            }
+            audio{
+                width: 200px;
+                height: 12px;
+            }
+            p#copyright{
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 10px;
+                margin-top: 50px;
+                margin-bottom: 50px;
             }
 
-            p.benny-sns{
-                float:left;
-                text-align:center;
-                font-size:25px;
-                margin-left: 150px;
-                font-weight: bold;
-            }
-
-            p.dasloe-sns{
-                float:left;
-                text-align:center;
-                font-size:25px;
-                margin-left: 210px;
-                font-weight: bold;
-            }
     </style>
     <script type="text/javascript">
-        function sizebigger1(){
-            let a = document.getElementById("about");
-            a.style.fontSize = '30px';
+        function sizebigger(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '20px';
+            a.style.backgroundColor="LemonChiffon"
         }
-        function sizesmaller1(){
-            let a = document.getElementById("about");
-            a.style.fontSize = '25px';
+        function sizesmaller(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '18px';
+            a.style.backgroundColor="white"
         }
-
-        function sizebigger2(){
-            let a = document.getElementById("music");
-            a.style.fontSize = '30px';
+        function changeColor(option){
+            let a = document.getElementById(option);
+            a.style.color = "#CCCC00";
         }
-        function sizesmaller2(){
-            let a = document.getElementById("music");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger3(){
-            let a = document.getElementById("beats");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller3(){
-            let a = document.getElementById("beats");
-            a.style.fontSize = '25px';
+        function backColor(option){
+            let a = document.getElementById(option);
+            a.style.color = "black";
         }
 
-        function sizebigger4(){
-            let a = document.getElementById("artists");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller4(){
-            let a = document.getElementById("artists");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger5(){
-            let a = document.getElementById("sponsor");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller5(){
-            let a = document.getElementById("sponsor");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger6(){
-            let a = document.getElementById("contact");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller6(){
-            let a = document.getElementById("contact");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger7(){
-            let a = document.getElementById("map");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller7(){
-            let a = document.getElementById("map");
-            a.style.fontSize = '25px';
-        }
         
-        function sizebigger8(){
-            let a = document.getElementById("home");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller8(){
-            let a = document.getElementById("home");
-            a.style.fontSize = '25px';
-        }
-
     </script>
 
 </head>
 <body>
-<!-- navigation bar        -->
-        <div id='navigation_bar'>
-            <div class='page-width'>
-                <div id='music_logo'>
-                    <img id="logo" src="Images/listen.png" title="logo" alt="logo">
-                </div>
-                <div id="mid">
-                    <li id='home' onmouseover="sizebigger8()" onmouseout="sizesmaller8()">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li id="about" onmouseover="sizebigger1()" onmouseout="sizesmaller1()">
-                        <a href="about.html">About</a>
-                    </li>
-                    <li id="music" onmouseover="sizebigger2()" onmouseout="sizesmaller2()">
-                        <a href="music.html">Music</a>
-                    </li>
-                    <li id="beats" onmouseover="sizebigger3()" onmouseout="sizesmaller3()">
-                        <a href="beats.html">Beats</a>
-                    </li>
-                    <li id="artists" onmouseover="sizebigger4()" onmouseout="sizesmaller4()">
-                        <a href="artists.html">Artists</a>
-                    </li>
-                    <li id="sponsor" onmouseover="sizebigger5()" onmouseout="sizesmaller5()">
-                        <a href="sponsor.html">Sponsor</a>
-                    </li>
-                    <li id="contact" onmouseover="sizebigger6()" onmouseout="sizesmaller6()">
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li id='map' onmouseover="sizebigger7()" onmouseout="sizesmaller7()">
-                        <a href="sitemap.html">Site Map</a>
-                    </li>
-
-                    <li>
-                        <audio controls autoplay loop>
-                            <source src="Music/Can't Sleep At Night(M).ogg" type="audio/ogg">
-                            <source src="Music/Can't Sleep At Night(M).mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </li>
-                </div>
-            </div>   
-        </div>
-
-
-<!-- today's music  -->
-        <hr id='line'>
-        <div id='title'>
-            <h3>JS Music House</h3>
-            <h2><a id='todays-music' href="music.html">Today's Music</a> </h2>
-        </div>
-        <div id='container1'>
-            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/557263728&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/322372804&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/434020701&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>           
-            <div id='one'>   
-                <p class='today-song'>
-                    <h1 class='song-title'>Anomaly</h1>
-                    <h2 class='song-details'>Artist: dasloe <br>
-                        Genre: Electronic <br>
-                        URL: <a href='https://soundcloud.com/dasloe' target='_blank'>https://soundcloud.com/dasloe</a>
-                    </h2>
-                </p>
-            </div>
         
-            <div id='two'> 
-                <p class='today-song'>
-                    <h1 class='song-title'>Sunset</h1>
-                    <h2 class='song-details'>Artist: fully bold <br>
-                        Genre: R&B <br>
-                        URL: <a href='https://soundcloud.com/fullybold/sunset-prod-rooftop' target='_blank'>https://soundcloud.com/fullybold/sunset-prod-rooftop</a>
-                    </h2>
-                </p>
+        <div class="audio">
+            <audio controls>
+                <source src="Music/Can't Sleep At Night(M).mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+            </audio>
+         </div>
+               
+        <div class="jumbotron">
+                
+                <h1 class="display-4">Everything Music</h1>
+                 <p class="lead">Without music, life would Bb</p>
+                <hr class="my-4">
+                <p>Please submit your email to receive our updates!</p>
+                <!-- learn more button  -->
+                <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+    
+                <form id="f">
+                    <div class="form-inline justify-content-center">
+                        <div class="col-auto">
+                        <label class="sr-only" for="inlineFormInput">Name</label>
+                        <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="username">
+                        </div>
+                        <div class="col-auto">
+                            <!-- sr-only = screen only  -->
+                        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="ex) gmail.com">
+                        </div>
+                        </div>
+                        
+                        <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div id='three'>
-                <p class='today-song'>
-                    <h1 class='song-title'>Bout Yah</h1>
-                    <h2 class='song-details'>Artist: brad <br>
-                        Genre: R&B <br>
-                        URL: <a href='https://soundcloud.com/brad247/bout-yah-luh-one' target='_blank'>https://soundcloud.com/brad247/bout-yah-luh-one</a>
-                    </h2>
-                </p>
+            
+
+<!-- navigation bar  -->
+
+            <div class="container">
+                <div class="mid">
+                    <ul>
+                        <li id='home' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li id="about" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li id="music" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="music.html">Music</a>
+                        </li>
+                        
+                        <li id="artists" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="artists.html">Artists</a>
+                        </li>
+
+                        <li id="news" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="news.html">News</a>
+                        </li>
+
+                        <li id="sponsor" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sponsor.html">Sponsor</a>
+                        </li>
+                        <li id="contact" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li id='map' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sitemap.html">Site Map</a>
+                        </li>
+                        <li id='credit' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="credit.html">Credit</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
+            <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="Images/headphone.jpg" class="card-img-top" alt="today's music" title="today's music">
+                        <div class="card-body">
+                          <h5 class="card-title">
+                              <a class="today" id="tm" onmouseover="changeColor(this.id)" onmouseout="backColor(this.id)" href="music.html">Today's Music</a> 
+                            </h5>
+                          <p class="card-text">Explore our daily suggestions just for you!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col mb-4">
+                      <div class="card">
+                        <img src="Images/producer.jpg" class="card-img-top" alt="today's artists" title="today's artists">
+                        <div class="card-body">
+                          <h5 class="card-title">
+                              <a class="today" id="ta" onmouseover="changeColor(this.id)" onmouseout="backColor(this.id)" href="artists.html">Today's Artists</a>
+                          </h5>
+                        <p class="card-text">Looking for new artists? Explore talented artists with us!</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            
 
-<!-- today's beats  -->
-        <h2 id='beats'><a href="beats.html">Today's Beats</a></h2>
-        <div id='container2'>
-            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/669492698&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/469816338&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <iframe class='today-music' width="480px" height="290px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/694467235&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+    <!-- headline news  -->
+            <div id="newsJumbo" class="jumbotron">
 
-            <div id='four'>   
-                <p class='today-song'>
-                    <h1 class='song-title'>Mood</h1>
-                    <h2 class='song-details'>Artist: Junsu Lee <br>
-                        Genre: Jazz R&B <br>
-                        URL: <a href='https://soundcloud.com/user-416606292' target='_blank'>https://soundcloud.com/user-416606292</a>
-                    </h2>
-                </p>
-            </div>
-            <div id='five'>   
-                <p class='today-song'>
-                    <h1 class='song-title'>Lots of Perc</h1>
-                    <h2 class='song-details'>Artist: Benny Kim <br>
-                        Genre: Electronic <br>
-                        URL: <a href='https://soundcloud.com/bennykim' target='_blank'>https://soundcloud.com/bennykim</a>
-                    </h2>
-                </p>
-            </div>
-            <div id='six'>   
-                <p class='today-song'>
-                    <h1 class='song-title'>OLIFE</h1>
-                    <h2 class='song-details'>Artist: Tomppabeats <br>
-                        Genre: Lofi <br>
-                        URL: <a href='https://soundcloud.com/tomppabeats' target='_blank'>https://soundcloud.com/tomppabeats</a>
-                    </h2>
-                </p>
-            </div>
-        </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Article # </th>
+                        <th> Publisher </th>
+                        <th> Headline </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>npr</td>
+                        <td ><a href="https://www.npr.org/event/music/513038608/hard-living-in-the-big-easy-housing-costs-push-musicians-out-of-new-orleans" target="_blank">Hard Living In The Big Easy: Housing Costs Push Musicians Out Of New Orleans</a></td>
 
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>mixmag</td>
+                        <td i><a href="https://mixmag.net/read/serato-studio-beta-launch-news" target="_blank">SERATO LAUNCHES BETA FOR NEW BEAT MAKING SOFTWARE</a> </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>CNBC</td>
+                        <td ><a href="https://www.cnbc.com/2019/08/17/music-producers-making-100k-a-year-selling-their-melodic-beats-online.html" target="_blank">Selling your original melodic beats online can proffer $100K a year in your pocket</a> </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>billboard</td>
+                        <td ><a href="https://www.billboard.com/articles/business/8544940/alleged-hacker-indicted-for-impersonating-a-producer-to-steal-unreleased" target="_blank">Alleged Hacker Indicted for Impersonating a Producer to Steal Unreleased Music</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>    
+            
 
-<!-- top artists  -->
-    <h4 id='top-artists'><a href="artists.html">Top Artists</a></h4>
-    <div id='artist-avatar'>
-        <img class='artist-pic' src="Images/junsu.png" title="junsu" alt="junsu">
-        <img class='artist-pic' src="Images/tompa.png" title="tompa" alt="tompa">
-        <img class='artist-pic' src="Images/benny.png" title="benny" alt="benny">
-        <img class='artist-pic' src="Images/dasloe.png" title="dasloe" alt="dasloe">
-    </div>
-    <p class="junsu-sns">
-        Junsu Lee<br>
-        SNS:<a href="https://www.instagram.com/jjuns_jjuns/" target="_blank">jjuns_jjuns</a>
-    </p>
-    <p class="tompa-sns">
-        Tomppabeats<br>
-        SNS:<a href="https://www.instagram.com/tomppabeats/" target="_blank">tomppabeats</a>
-    </p>
-    <p class="benny-sns">
-        Benny Kim<br>
-        SNS:<a href="https://www.instagram.com/bennykim95/" target="_blank">bennykim95</a>
-    </p>
-    <p class="dasloe-sns">
-        Dasloe<br>
-        SNS:<a href="https://www.instagram.com/dasloe/" target="_blank">dasloe</a>
-    </p>
-
-
-    </body>
+            
+</body>
 </html>

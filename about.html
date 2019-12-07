@@ -4,369 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Everything Music, the bridge between artists and the music lovers">
+    <meta name="keywords" content="music, soundcloud, youtube, new music, trend, music trend, music article, producer, beats, rap beat">
+    <title>Project version 1</title>
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
     <style>
-        body{
-                margin:0;
-                font-family: Arial, Helvetica, sans-serif;
-                background-color:#F0F8FF;
-            }
-            
-            div#navigation_bar{
-                background-color: white;
-                margin-left: 330px;
-            }
-    
-            div#music_logo{
-                padding-top: 4px;
-                float: left;
-                
-            }
-    
-            img#logo{
-                height:50px;
-            }
-    
-            div#mid{
-                float: left;
-            }
-    
-            #mid li{
-                list-style-type: none;
-                font-size: 25px;
-                padding: 13px 20px 13px 20px;
-                float: left;
-            }
-    
-            #mid li a{
-                color:black;
-                font-family: Arial, Helvetica, sans-serif;
-                text-decoration: none;
-                font-weight:bold;
-            }
-
-            audio{
-                display: block;
-                height: 20px;
-                width: 150px;
-                margin-left: 100px;
-                margin-top: 5px;
-            }
-            hr#line{
-                width:100%;
-            }
-
-            div#title h3{
-                font-size: 60px;
+            .jumbotron{
+                background-image: url("Images/ateam.png");
                 text-align: center;
-                margin-top:10px;
-                margin-bottom: 5px;
-                font-family: cursive;   
             }
-
-            /* objective */
-            h2#mission{
-                margin-left:120px;
-                font-family: cursive;
-                font-size:35px;
+            .container{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
-
-            p#objective{
-                margin-left:120px;
-                margin-right:120px;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 25px;
+            .display-4{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                font-size: 60px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
             }
-        
-            /* site map */
-        
-            h2#js{
-                margin-left:120px;
-                font-family: cursive;
-                font-size: 30px;
+            .lead{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                color: black;
+                /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
             }
-            p.title{
-                float:left;
-                margin-left: 180px;
-                font-size: 23px;
-            } 
-            p.title a{
-                text-decoration: none;
-                color:black;
+            p{
+                font-size: 18px;
             }
-            .about-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 180px;
+            .photo{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
+                margin-bottom: 80px;
             }
-            .music-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 170px;
-            }
-            .beats-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 75px;
-            }
-            .artists-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 80px;
-            }
-            .sponsor-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 80px;
-            }
-            .contact-list{
-                float:left;
-                margin-top: 10px;
-                margin-left: 93px;
-            }
-            a{
-                text-decoration: none;
-                color: grey;
-            }
-
-            /* comment */
-            p#comment{
-                margin-top: 300px;
-            }
-            h2#survey{
-                margin-left: 120px;
-            }
-            #textarea{
-                margin-left: 120px;
-            }
-            
-            /* picture */
             img{
-                display:block;
-                margin-left:auto;
-                margin-right:auto;
+                height: 250px;
             }
-            
-            
-            
-
+            td{
+                
+                padding-right: 20px;
+            }
     </style>
     <script type="text/javascript">
-        function sizebigger1(){
-            let a = document.getElementById("about");
-            a.style.fontSize = '30px';
+    // navigation hover java (changes backgroundColor)
+        function sizebigger(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '20px';
+            a.style.backgroundColor="aliceblue"
         }
-        function sizesmaller1(){
-            let a = document.getElementById("about");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger2(){
-            let a = document.getElementById("music");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller2(){
-            let a = document.getElementById("music");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger3(){
-            let a = document.getElementById("beats");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller3(){
-            let a = document.getElementById("beats");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger4(){
-            let a = document.getElementById("artists");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller4(){
-            let a = document.getElementById("artists");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger5(){
-            let a = document.getElementById("sponsor");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller5(){
-            let a = document.getElementById("sponsor");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger6(){
-            let a = document.getElementById("contact");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller6(){
-            let a = document.getElementById("contact");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger7(){
-            let a = document.getElementById("map");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller7(){
-            let a = document.getElementById("map");
-            a.style.fontSize = '25px';
-        }
-
-        function sizebigger8(){
-            let a = document.getElementById("home");
-            a.style.fontSize = '30px';
-        }
-        function sizesmaller8(){
-            let a = document.getElementById("home");
-            a.style.fontSize = '25px';
+        function sizesmaller(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '18px';
+            a.style.backgroundColor="white"
         }
     </script>
+
 </head>
 <body>
-    <!-- navigation bar -->
-    <div id='navigation_bar'>
-            <div class='page-width'>
-                <div id='music_logo'>
-                    <img id="logo" src="Images/listen.png" title="logo" alt="logo">
+
+<!-- navigation bar  -->
+
+            <div class="container">
+                <div class="mid">
+                    <ul>
+                        <li id='home' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li id="about" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li id="music" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="music.html">Music</a>
+                        </li>
+                        
+                        <li id="artists" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="artists.html">Artists</a>
+                        </li>
+
+                        <li id="news" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="news.html">News</a>
+                        </li>
+
+                        <li id="sponsor" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sponsor.html">Sponsor</a>
+                        </li>
+                        <li id="contact" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li id='map' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sitemap.html">Site Map</a>
+                        </li>
+                        <li id='credit' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="credit.html">Credit</a>
+                        </li>
+                    </ul>
                 </div>
-                <div id="mid">
-                    <li id='home' onmouseover="sizebigger8()" onmouseout="sizesmaller8()">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li id="about" onmouseover="sizebigger1()" onmouseout="sizesmaller1()">
-                        <a href="about.html">About</a>
-                    </li>
-                    <li id="music" onmouseover="sizebigger2()" onmouseout="sizesmaller2()">
-                        <a href="music.html">Music</a>
-                    </li>
-                    <li id="beats" onmouseover="sizebigger3()" onmouseout="sizesmaller3()">
-                        <a href="beats.html">Beats</a>
-                    </li>
-                    <li id="artists" onmouseover="sizebigger4()" onmouseout="sizesmaller4()">
-                        <a href="artists.html">Artists</a>
-                    </li>
-                    <li id="sponsor" onmouseover="sizebigger5()" onmouseout="sizesmaller5()">
-                        <a href="sponsor.html">Sponsor</a>
-                    </li>
-                    <li id="contact" onmouseover="sizebigger6()" onmouseout="sizesmaller6()">
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li id='map' onmouseover="sizebigger7()" onmouseout="sizesmaller7()">
-                        <a href="sitemap.html">Site Map</a>
-                    </li>
-                    
-                    <li>
-                        <audio controls autoplay loop>
-                            <source src="Music/Can't Sleep At Night(M).ogg" type="audio/ogg">
-                            <source src="Music/Can't Sleep At Night(M).mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </li>
+            </div>
+<!-- jumbotron -->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">About Us</h1>
+                    <p class="lead">
+                        Learn more about our team
+                    </p>
                 </div>
-            </div>   
-        </div>
-        <hr id='line'>
-        <div id='title'>
-            <h3>JS Music House</h3>
-        </div>
-<!-- objective -->
-<h2 id='mission'>Our Mission</h2>
+            </div>
 
-<p id='objective'>
-    JS Music House is a website that introduces music that are not listed on Apple Music or Spodify and allow users to sponsor the listed artists. 
-    The objective of the website is to give opportunities for talented musicians who make good music but lack exposure to get sponsored by people and get more exposure. 
-    Also, it will allow music lovers to discover talent musicians and their new songs. 
-    Ultimately, it will function as a bridge that helps talented artists to overcome the high barrier to enter the industry.
-</p>
-
-<img src="Images/pic.png" title="vision" alt="vision">
-
-<!-- site map  -->
-<!-- <div id='site-map'>
-    <h2 id='js'>JS Music House Site Map</h2>
-    <p class='title'>
-        <a href="#">About</a>
-    </p>
-    <p class='title'>
-        <a href="music.html">Music</a>
-    </p>
-    <p class='title'>
-        <a href="beats.html">Beats</a>
-    </p>
-    <p class='title'>
-        <a href="artists.html">Artists</a>
-    </p>
-    <p class='title'>
-        <a href="sponsor.html">Sponsor</a>
-    </p>
-    <p class='title'>
-        <a href="contact.html">Contact</a>
-    </p>
-
-    <p class='about-list'>
-        <a href="#">Objective</a>
-        <br>
-        <br>
-        <a href="#">Site Map</a>
-    </p>
-    <p class='music-list'>
-        <a href="index.html">Today's Music</a>
-        <br>
-        <br>
-        <a href="music.html">Music By Genre</a>
-        <br>
-        <br>
-        <a href="music.html">Discover New Music</a>
-        <br>
-        <br>
-        <a href="music.html">Vote For Favorite Music</a>
-    </p>
-    <p class='beats-list'>
-        <a href="index.html">Today's Beats</a>
-        <br>
-        <br>
-        <a href="beats.html">Beats By Genre</a>
-        <br>
-        <br>
-        <a href="beats.html">Discover New Beats</a>
-        <br>
-        <br>
-        <a href="beats.html">Vote For Favorite Beat</a>
-    </p>
-
-    <p class='artists-list'>
-        <a href="index.html">Top Beats</a>
-        <br>
-        <br>
-        <a href="artists.html">Artists By Genre</a>
-        <br>
-        <br>
-        <a href="artists.html">Meet New Artists</a>
-        <br>
-        <br>
-        <a href="artists.html">Vote For Favorite Artist</a>
-    </p>
-    <p class='sponsor-list'>
-        <a href="sponsor.html">Sponsor Artists</a>
-        <br>
-        <br>
-        <a href="artists.html">Vote For Talented Artists</a>
-    </p>
-    <p class='contact-list'>
-        <a href="contact.html">Contact Via Email</a>
-        <br>
-        <br>
-        <a href="contact.html">Location</a>
-    </p> -->
-<!-- survey form -->
-    <!-- <form method="post" action="mailto:jsljoe95@gmail.com">
-        <p id='comment'>
-            <h2 id='survey'>What do you think about this website?</h2>
-            <textarea id='textarea' name="comments" rows="8" cols="90" placeholder="Your comments will be carefully reviewed"></textarea>
-        </p>
-    </form>   -->
-</body>
-</html>
+            <div class="container">
+                <p>
+                    The objective of the website is to provide various music related services, including music suggestion, news, artist sponsorship, etc. 
+                    Our another goal is to help talented musicians to have more exposure, allowing them to overcome the high barrier to enter the industry. 
+                    Ultimately, our website will function as a bride that connects artists and the music lovers. 
+                </p>
+                <div class="photo">
+                    <table>
+                        <tr>
+                            <td><img src="Images/one.jpg"></td>
+                            <td><img src="Images/two.jpg"></td>
+                            <td><img src="Images/three.jpg"></td>
+                        </tr>
+                    </table>                 
+                </div>
+            </div>
+        </body>
+    </html>
+ 

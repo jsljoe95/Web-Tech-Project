@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Everything Music, the bridge between artists and the music lovers">
+    <meta name="keywords" content="music, soundcloud, youtube, new music, trend, music trend, music article, producer, beats, rap beat">
+    <title>Project version 1</title>
+    <link rel="stylesheet" type="text/css" href="CSS/NavBar.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <style>
+
+            .jumbotron{
+                background-image: url("Images/news.png");
+                text-align: center;
+            }
+            .container{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .display-4{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                font-size: 60px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+            }
+            .lead{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 20px;
+                color: white;
+                /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
+            }
+            #promote{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
+                color: white;
+                font-weight: bold;
+                font-size: 15px;
+                margin-top: 120px;
+            }
+            #myForm span{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                font-size: 20px;
+                
+            }
+            #submit{
+                border:none;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 15px;
+                background-color: lightskyblue;
+                color: white; 
+            }
+
+            /* slideshow  */
+            
+            .images{
+                text-align: center;
+            }
+            .button{
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+
+            button{
+                border:none;
+                color: white;
+                background-color: navy;
+                cursor:pointer;
+            }
+            #newsHead{
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size:  60px;
+                margin: 10px 20px;
+                font-weight: bold;
+            }
+
+            #newsHead a{
+                color: black;
+                
+
+            }
+
+            .aimg{
+                height: 370px;
+            }
+            .alink{
+                color: black;
+            }
+            .card-group{
+                margin-bottom: 80px;
+            }
+
+    </style>
+    <script type="text/javascript">
+    // navigation hover java (changes backgroundColor)
+        function sizebigger(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '20px';
+            a.style.backgroundColor="#99CCFF"
+        }
+        function sizesmaller(option){
+            let a = document.getElementById(option);
+            // a.style.fontSize = '18px';
+            a.style.backgroundColor="white"
+        }
+
+        function check(){
+            let form1 = document.getElementById("myForm");
+            let a = form1.topic.value;
+            if(a == ""){
+                alert("Please enter a topic.")
+            }
+        }
+    // slideshow 
+        let srcArray=[
+            "Images/kpop.jpg",
+            "Images/kelly.jpg",
+            "Images/post.jpg"
+        ];
+
+        let hrefArray=[
+            "https://www.rollingstone.com/music/music-features/bts-kpop-albums-bands-global-takeover-707139/",
+            "https://www.billboard.com/articles/business/legal-and-management/8545562/r-kelly-charged-bribes-aaliyah-marriage",
+            "https://www.billboard.com/articles/business/chart-beat/8545334/the-year-in-charts-2019-post-malone-billboard-top-artist-of-year"
+        ];
+
+        let title=[
+            "How K-Pop Conquered the West",
+            "R. Kelly Charged With Using Bribes to Buy Fake ID for Aaliyah",
+            "Post Malone Crowned Billboard's Top Artist of the Year"
+        ]
+        let i = 0
+        function next(){
+            let link=document.getElementById("link");
+            let image=document.getElementById("image");
+
+            
+            if(i<2 || link.href==hrefArray[i]){
+                image.src = srcArray[i+1]; 
+                link.href=hrefArray[i+1];
+                link.innerHTML = title[i+1];
+                i=i+1;
+                console.log(i);
+                }
+            
+            if(i==3 || link.href==hrefArray[i-1]){
+                image.src = srcArray[0]; 
+                link.href=hrefArray[0];
+                link.innerHTML = title[0];
+                i=0;
+            }
+        }  
+
+        function change(){
+            document.getElementById("link").style.color="navy"
+            }
+        function back(){
+            document.getElementById("link").style.color="black"
+        }
+        
+
+    </script>
+
+</head>
+<body>
+
+<!-- navigation bar  -->
+
+            <div class="container">
+                <div class="mid">
+                    <ul>
+                        <li id='home' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li id="about" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li id="music" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="music.html">Music</a>
+                        </li>
+                        
+                        <li id="artists" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="artists.html">Artists</a>
+                        </li>
+
+                        <li id="news" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="news.html">News</a>
+                        </li>
+
+                        <li id="sponsor" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sponsor.html">Sponsor</a>
+                        </li>
+                        <li id="contact" onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li id='map' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="sitemap.html">Site Map</a>
+                        </li>
+                        <li id='credit' onmouseover="sizebigger(this.id)" onmouseout="sizesmaller(this.id)">
+                            <a href="credit.html">Credit</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+<!-- jumbotron -->
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Daily Music News</h1>
+                    <p class="lead">
+                        Stay updated with our Daily Music News!
+                    </p>
+
+                    <p id="promote">
+                        What do you think is the hottest subject right now?
+                    </p>
+                    <form id="myForm">
+                        <span>Topic:</span> <input id="topic" type="text" size="10" value="" >
+                        <input onclick="check()" id="submit" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+<!-- news slideshow  -->
+    <div id="main" class="container">
+        
+        <h3 id="newsHead">
+            <a onmouseover="change()" onmouseout="back()" id="link" href="https://www.rollingstone.com/music/music-features/bts-kpop-albums-bands-global-takeover-707139/" target="_blank">How K-Pop Conquered the West</a> 
+        </h3>
+        <div class="images">
+            <img id="image" src="Images/kpop.jpg" title="album" alt="album" width="80%">
+        </div>
+        <div class="button">
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+    <hr>
+
+    <div class="card-group">
+        <div class="card">
+            <img class="aimg" src="Images/bb.jpg" class="card-img-top" title="bts" alt="bts">
+            <div class="card-body">
+            <h5 class="card-title"><a class="alink" href="https://www.bbc.com/news/newsbeat-50515696?intlink_from_url=https://www.bbc.com/news/topics/c82dl119le7t/k-pop&link_location=live-reporting-story" target="_blank">BTS: What will military service mean for their future?</a> </h5>
+            <p class="card-text">BBC</p>
+            <p class="card-text"><small class="text-muted">Last updated 50 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="aimg" src="Images/m.jpg" class="card-img-top" alt="listening" title="listening" >
+            <div class="card-body">
+            <h5 class="card-title"><a class="alink" href="https://www.medicalnewstoday.com/articles/302903.php#1" target="_blank">The power of music: how it can benefit health</a></h5>
+            <p class="card-text">Medical News Today</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="aimg" src="Images/ccc.jpg" class="card-img-top" alt="Christmas" title="Christmas">
+            <div class="card-body">
+            <h5 class="card-title"><a class="alink" href="https://www.bbc.co.uk/music/articles/13e864b9-2945-4a4f-970c-52b18731b3f1" target="_blank">How much money do stars make from Christmas hits?</a></h5>
+            <p class="card-text">BBC</p>
+            <p class="card-text"><small class="text-muted">Last updated 13 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group">
+        <div class="card">
+            <img class="aimg" src="Images/dave.jpg" class="card-img-top" title="dave" alt="dave">
+            <div class="card-body">
+            <h5 class="card-title"><a class="alink" href="https://www.billboard.com/articles/columns/hip-hop/8545524/dave-east-jay-electronica-no-hoodie" target="_blank">Dave East & Jay Electronica Team Up for 'No Hoodie (Nothin' to Lose)' to Benefit the Homeless: Premiere</a> </h5>
+            <p class="card-text">Billboard</p>
+            <p class="card-text"><small class="text-muted">Last updated 20 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="aimg" src="Images/cl.jpg" class="card-img-top" alt="cl" title="cl" >
+            <div class="card-body">
+            <h5 class="card-title"><a class="alink" href="https://www.billboard.com/articles/news/international/8545344/cl-releases-first-new-solo-songs-in-three-years" target="_blank">CL Releases First New Solo Songs in 3 Years: Listen to '+ DONE161201+' & '+ REWIND170205+'</a></h5>
+            <p class="card-text">Billboard</p>
+            <p class="card-text"><small class="text-muted">Last updated 46 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="aimg" src="Images/top.jpg" class="card-img-top" alt="top" title="top">
+            <div class="card-body">
+            <h5 class="card-title"><a class="alink" href="https://www.billboard.com/articles/news/international/8545132/tumblr-most-popular-k-pop-groups-2019" target="_blank">Here Are 2019's Most Popular K-Pop Groups, According to Tumblr</a></h5>
+            <p class="card-text">Billboard</p>
+            <p class="card-text"><small class="text-muted">Last updated 19 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
