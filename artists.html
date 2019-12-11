@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Everything Music, the bridge between artists and the music lovers">
     <meta name="keywords" content="music, soundcloud, youtube, new music, trend, music trend, music article, producer, beats, rap beat">
-    <title>Project version 1</title>
+    <title>Artists</title>
     <link rel="stylesheet" type="text/css" href="CSS/NavBar.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -75,60 +75,14 @@
     <script type="text/javascript">
         function sizebigger(option){
             let a = document.getElementById(option);
-            // a.style.fontSize = '20px';
             a.style.backgroundColor="#C0C0C0"
         }
         function sizesmaller(option){
             let a = document.getElementById(option);
-            // a.style.fontSize = '18px';
             a.style.backgroundColor="white"
         }
 
-        let srcList = [
-            // exciting
-            "https://www.youtube.com/embed/RyCNEFiaNNg", 
-            "https://www.youtube.com/embed/fOeq_UJjonA",
-
-            // romantic 
-            "https://www.youtube.com/embed/AJtDXIazrMo",
-            "https://www.youtube.com/embed/kOCkne-Bku4",
-
-            // Sad 
-            "https://www.youtube.com/embed/c7rCyll5AeY",
-            "https://www.youtube.com/embed/tJ3E-pYPYjI",
-
-            // Tired 
-            "https://www.youtube.com/embed/fvjpE_wFL5A",
-            "https://www.youtube.com/embed/-2OJa-XMfek",
-
-            // Strange 
-            "https://www.youtube.com/embed/SDTZ7iX4vTQ",
-            "https://www.youtube.com/embed/bpOSxM0rNPM",
-
-            // Glitchy 
-            "https://www.youtube.com/embed/Kd3xLxRB26I",
-            "https://www.youtube.com/embed/HZik4fKw3G0",
-
-            // Sentimental 
-            "https://www.youtube.com/embed/ShZ978fBl6Y",
-            "https://www.youtube.com/embed/o5p9zQdxSfs",
-
-            // gloomy 
-            "https://www.youtube.com/embed/FgMgXbd7f_g",
-            "https://www.youtube.com/embed/zlJDTxahav0"
-        ];
-        
-        let moodArray = ["exciting","","romantic","","sad","","tired","","strange","","glitchy","","sentimental","","gloomy"];
-
-        function dragEnd(mood){
-            for(i=0; i<moodArray.length; i=i+1){
-                if(mood==moodArray[i]){
-                    document.getElementById("one").src=srcList[i];
-                    document.getElementById("two").src=srcList[i+1];
-                }
-            }
-        }
-
+// validation 
         function val(){
             let form1 = document.getElementById("myForm");
             
@@ -136,7 +90,7 @@
                 alert("Please enter a name");
             }
         }
-
+// change image when mouseover 
         function change(){
             document.getElementById("hiko").src="Images/person1-1.jpg";
         }
@@ -263,12 +217,5 @@
 
 
             </div>
-
-            
-
-
-
-        
-
 </body>
 </html>
